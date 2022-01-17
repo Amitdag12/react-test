@@ -1,0 +1,77 @@
+body {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: column;
+   height: 100vh;
+}
+.app{
+    height: 100px;
+}
+
+.axis {
+    position: absolute;
+}
+
+.cross-axis {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: blue;
+}
+
+.main-axis {
+    top: 50%;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 100%;
+    background-color: red;
+}
+
+.axis::after {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 2em;
+}
+
+.main-axis::after {
+    position: absolute;
+    content: 'Main Axis';
+    color: red;
+}
+
+.cross-axis::after {
+    white-space: nowrap;
+    content: 'Cross Axis';
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: blue;
+}
+.notepad{
+    justify-self: flex-start;
+    background-color: rgb(225,233,160);
+    box-shadow: 10px -3px 20px #0A0A0A;
+    height: 50vh;
+}
+.listItem{
+    
+    border:solid ;
+    border-color: rgb(131,170,178);
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    width: 100%;
+    z-index: -1;
+}
+.brownPart{
+ background-color: rgb(98,59,24);  
+ height: 3vh; 
+ z-index: 0;
+}
+.nextPage{
+    float: right;
+    position: relative;
+    top: -10%;
+}

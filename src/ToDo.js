@@ -4,8 +4,8 @@ export default function ToDo({ todo,UpdateChecked }) {
     UpdateChecked(todo.id);
   }
   return (
-    <div>
-      <label>
+    <div className="listItem">
+      <label >
         <input type="checkbox" onChange={Check} checked={todo.complete}></input>
         {todo.name}
       </label>
